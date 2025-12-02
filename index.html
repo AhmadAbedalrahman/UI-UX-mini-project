@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Flow</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Checkout Steps -->
+        <div id="checkout-steps">
+            <!-- Step 1: Summary -->
+            <div class="step active" id="step-summary">
+                <h2>Checkout Summary</h2>
+                <p>Items in your cart: <strong>3 items</strong></p>
+                <p>Total: <strong>$149.97</strong></p>
+                <button class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 2: Personal Info -->
+            <div class="step" id="step-personal">
+                <h2>Personal & Contact Info</h2>
+                <form id="personal-form">
+                    <label>
+                        Full Name
+                        <input type="text" name="name" required>
+                        <span class="error"></span>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                        <span class="error"></span>
+                    </label>
+                    <div class="buttons">
+                        <button type="button" class="prev-btn">Back</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Address -->
+            <div class="step" id="step-address">
+                <h2>Billing / Shipping Address</h2>
+                <form id="address-form">
+                    <label>
+                        Street Address
+                        <input type="text" name="street" required>
+                        <span class="error"></span>
+                    </label>
+                    <label>
+                        City
+                        <input type="text" name="city" required>
+                        <span class="error"></span>
+                    </label>
+                    <label>
+                        ZIP / Postal Code
+                        <input type="text" name="zip" required>
+                        <span class="error"></span>
+                    </label>
+                    <label>
+                        Country
+                        <input type="text" name="country" required>
+                        <span class="error"></span>
+                    </label>
+                    <div class="buttons">
+                        <button type="button" class="prev-btn">Back</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: Payment -->
+            <div class="step" id="step-payment">
+                <h2>Payment Details</h2>
+                <form id="payment-form">
+                    <label>
+                        Card Number
+                        <input type="text" name="card" maxlength="19" placeholder="1234 5678 9012 3456" required>
+                        <span class="error"></span>
+                    </label>
+                    <label>
+                        Expiry (MM/YY)
+                        <input type="text" name="expiry" maxlength="5" placeholder="MM/YY" required>
+                        <span class="error"></span>
+                    </label>
+                    <label>
+                        CVV
+                        <input type="text" name="cvv" maxlength="3" placeholder="123" required>
+                        <span class="error"></span>
+                    </label>
+                    <div class="buttons">
+                        <button type="button" class="prev-btn">Back</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 5: Review & Confirm -->
+            <div class="step" id="step-review">
+                <h2>Review & Confirm</h2>
+                <div id="review-info">
+                    <!-- Filled dynamically -->
+                </div>
+                <div class="buttons">
+                    <button type="button" class="prev-btn">Back</button>
+                    <button type="button" class="confirm-btn">Pay Now</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Success / Failure -->
+            <div class="step" id="step-success">
+                <h2>Payment Status</h2>
+                <div id="payment-result">
+                    <!-- Filled dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
