@@ -11,10 +11,13 @@ A multi-step checkout flow built with HTML, CSS, and JavaScript.
 - Responsive design (desktop, tablet, mobile)
 
 ## Project Structure
+├── assets
+  ├── css
+    ├── style.css
+  ├── js
+    ├── main.js
 ├── index.html
-├── style.css
-├── script.js
-└── README.md
+├── README.md
 
 ## How to Run Locally
 1. Clone the repository:
